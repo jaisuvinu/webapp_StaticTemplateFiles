@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Branches</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+    </head>
+    <body  background="{% static '/images/blueBG.jpg' %}">
+
+            {% block content %}
+            <p>
+             <a href ="{% url 'homel' %}">Home</a> |
+            <a href ="{% url 'coursesl' %}">Courses</a> |
+            <a href = "#">Branches</a> |
+            <a href = "{% url 'contactl' %}">Contact</a> |
+            <a href = "{% url 'studentsl' %}">Students List</a> |
+            <a href = "{% url 'signupl' %}">Students Signup</a> |
+            <a href = "{% url 'signinl' %}">Students signin</a>
+            </p>
+
+            <hr>
+            <u>Branches List :</u>
+            <ul type = "square">
+                <li>Seattle</li>
+                <li>Bellevue</li>
+                <li>Bothell</li>
+            </ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+             {% endblock %}
+    </body>
+</html>

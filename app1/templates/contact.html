@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+    </head>
+    <body background="{% static '/images/blueBG.jpg' %}">
+
+       {% block content %}
+            <p>
+            <a href = "Home.html">Home</a> |
+            <a href = "courses.html">Courses</a> |
+            <a href = "branches.html">Branches</a> |
+            <a href = "#">Contact</a> |
+            <a href = "Students.html">Students List</a> |
+            <a href = "signup.html">Students signup</a> |
+            <a href = "signin.html">Students signin</a>
+            </p>
+
+            <hr>
+            <address>
+                Address : 3604 194th pl SE unit D ,Bothell,WA-98012
+            </address>
+            <a>Click here for more Info</a>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        {% endblock %}
+    </body>
+</html>

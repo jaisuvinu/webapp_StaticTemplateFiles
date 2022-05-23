@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+    </head>
+    <body background="{% static '/images/blueBG.jpg' %}">
+
+        {% block content %}
+            <p>
+            <a href ="{% url 'homel' %}">Home</a> |
+            <a href ="{% url 'coursesl' %}">Courses</a> |
+            <a href = "{% url 'branchesl' %}">Branches</a> |
+            <a href = "{% url 'contactl' %}">Contact</a> |
+            <a href = "#">Students List</a> |
+            <a href = "{% url 'signupl' %}">Students Signup</a> |
+            <a href = "{% url 'signinl' %}">Students signin</a>
+            </p>
+
+            <hr>
+                <table align ="center" bgcolor = " #c5b1ad " border="5px" cellspacing = '5px' cellpadding = "5px">
+                <caption>Students List</caption>
+                <br><br><br>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <td>NAME</td>
+                        <td>COURSE</td>
+                        <td>PHOTO</td>
+                        <td>MORE</td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>501</td>
+                        <td>Vijay</td>
+                        <td>Django</td>
+                        <td>
+                            image
+                        </td>
+                        <td>
+                            <a href = "Vijay.html">View</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>502</td>
+                        <td>Vishali</td>
+                        <td>Java</td>
+                        <td>
+                            image
+                        </td>
+                        <td>
+                            <a href = "Vijay.html">View</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>503</td>
+                        <td>Sans</td>
+                        <td>Django</td>
+                        <td>
+                            image
+                        </td>
+                        <td>
+                            <a href = "Vijay.html">View</a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        {% endblock %}
+    </body>
+</html>

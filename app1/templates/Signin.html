@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signin</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+        <script src ="{% static '/scripts/app1scripts.js' %}">
+        </script>
+    </head>
+    <body background="{% static '/images/blueBG.jpg' %}">
+
+        {% block content %}
+            <p>
+             <a href ="{% url 'homel' %}">Home</a> |
+            <a href ="{% url 'coursesl' %}">Courses</a> |
+            <a href = "{% url 'branchesl' %}">Branches</a> |
+            <a href = "{% url 'contactl' %}">Contact</a> |
+            <a href = "{% url 'studentsl' %}">Students List</a> |
+            <a href = "{% url 'signupl' %}">Students Signup</a> |
+            <a href = "#">Students signin</a>
+            </p>
+
+        <hr>
+        <form name ="loginform" action ="www.vija.com" method ="post" onsubmit= "return checkLoginFormData()" onreset = "return clearLoginFormData()">
+
+            <table bgcolor = "#f2b7a5" align ="center" cellspacing="10px" cellpadding ="10px" border ="1px">
+                <caption ><b>Registration Form</b></caption><br><br>
+                <tr>
+                    <td><label for="id1">User Name</label></td>
+                    <td><input type="text" id = "id1" name ="name1">
+                        <span id ="s1">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for ="id2">Password</label></td>
+                    <td><input type="password" id ="id2"name ="name2">
+                        <span id = "s2">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type ="submit" value ="Login">
+                        <input type ="reset" value ="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+             {% endblock %}
+    </body>
+</html>

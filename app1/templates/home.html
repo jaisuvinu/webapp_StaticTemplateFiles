@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+    </head>
+    <body background="{% static '/images/blueBG.jpg' %}">
+        {% block content %}
+            <p>
+            <a href ="#">Home</a> |
+            <a href ="{% url 'coursesl' %}">Courses</a> |
+            <a href = "{% url 'branchesl' %}">Branches</a> |
+            <a href = "{% url 'contactl' %}">Contact</a> |
+            <a href = "{% url 'studentsl' %}">Students List</a> |
+            <a href = "{% url 'signupl' %}">Students Signup</a> |
+            <a href = "{% url 'signinl' %}">Students signin</a>
+            </p>
+
+            <hr>
+            <dl>
+                <dt>About Vija Acadamy :</dt><br>
+                <dd>
+                    <b>
+                        Vija Acadamy
+                    </b>
+                    is a leading software institute in USA.We help students with high standard coaching and help them in placements with our
+                    <u>Expert Faculty</u>
+                </dd>
+            </dl>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        {% endblock %}
+    </body>
+</html>

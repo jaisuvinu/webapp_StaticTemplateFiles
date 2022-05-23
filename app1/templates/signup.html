@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students SignUp</title>
+        {% extends "base.html" %}
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static '/styles/app1styles.css' %}">
+        <script src ="{% static '/scripts/app1scripts.js' %}">
+        </script>
+    </head>
+    <body background="{% static '/images/blueBG.jpg' %}">
+
+        {% block content %}
+            <p>
+            <a href ="{% url 'homel' %}">Home</a> |
+            <a href ="{% url 'coursesl' %}">Courses</a> |
+            <a href = "{% url 'branchesl' %}">Branches</a> |
+            <a href = "{% url 'contactl' %}">Contact</a> |
+            <a href = "{% url 'studentsl' %}">Students List</a> |
+            <a href = "#">Students Signup</a> |
+            <a href = "{% url 'signinl' %}">Students signin</a>
+            </p>
+
+        <hr>
+        <form name ="regform" action ="www.vija.com" method ="get" onsubmit="return clickRegFormData()" onreset ="return clearRegFormData()">
+
+            <table bgcolor = "#f2b7a5" align ="center" cellspacing="10px" cellpadding ="10px" border ="1px">
+                <caption ><b>Registration Form</b></caption><br><br>
+                <tr>
+                    <td><label for="id1">User Name</label></td>
+                    <td><input type="text" id = "id1" name ="name1">
+                        <span id="s1">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for ="id2">Password</label></td>
+                    <td><input type="password" id ="id2"name ="name2">
+                        <span id ="s2">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for ="id3">City of Employment</label></td>
+                    <td><input type="text" id ="id3"name ="name3">
+                        <span id ="s3">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for ="id4">Web Server</label></td>
+                    <td><select id = "id4" name = "name4">
+                        <option value ="Tomcat">Tomcat</option>
+                        <option value ="Tommee">Tom</option>
+
+                    </select></td>
+                </tr>
+                <tr><td><label >Please specify your role:</label></td>
+                <td>
+                <input type ="radio"  value="Admin">Admin
+                <input type ="radio" value="Engineer">Engineer
+                <input type ="radio" value="Manager">Manager
+                <input type ="radio" value="Guest">Guest
+                </td>
+                </tr>
+                <tr>
+                    <td><label>Single Sign-on to the following:</label></td>
+                    <td><input type ="checkbox" value ="Mail">Mail
+                        <input type ="checkbox" value ="Payroll">Payroll
+                        <input type ="checkbox" value ="Self-service">Self-service
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type ="submit" value ="Register">
+                        <input type ="reset" value ="Reset">
+                </tr>
+            </table>
+        </form>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,26 @@
+h1{
+
+    font-size: "30px";
+
+}
+p{
+   text-align:"center";
+}
+a{
+    font-size: "30px";
+    align:"center";
+    color: "black";
+
+}
+span{
+    color:red;
+}
+header{
+    background-color:rgb(226, 163, 142);
+    text-align:"center";
+
+}
+footer{
+    background-color:rgb(226, 163, 142);
+    text-align:"center";
+}
